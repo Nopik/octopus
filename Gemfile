@@ -1,7 +1,7 @@
 source :rubygems
 
-gem 'activerecord', '3.0.6'
-gem 'actionpack', '3.0.6'
+gem 'activerecord', '3.0.7'
+gem 'actionpack', '3.0.7'
 
 group :test do
   gem "rake", ">= 0.8.7"
