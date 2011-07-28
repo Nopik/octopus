@@ -5,7 +5,9 @@ class Octopus::Logger < Logger
     str = super 
     
     if ActiveRecord::Base.connection.respond_to?(:current_shard)
-      str += "Shard: #{ActiveRecord::Base.connection.current_shard} -" 
+      str = "Shard: #{ActiveRecord::Base.connection.current_shard} - " + str 
+		else
+			str = "Unknown shard - " + str
     end
     
     str
